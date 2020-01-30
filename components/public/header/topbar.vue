@@ -1,14 +1,16 @@
 <template>
-  <el-row :gutter="0"
-  class="m-header">
+  <el-row
+    :gutter="0"
+    class="m-header"
+  >
     <el-col :span="5">
-        <geo/>
+      <geo />
     </el-col>
     <el-col :span="5">
-      <user/>
+      <user />
     </el-col>
     <el-col :span="14">
-      <navbar/>
+      <navbar />
     </el-col>
   </el-row>
 </template>
@@ -18,11 +20,11 @@ import Geo from './geo.vue'
 import User from './user.vue'
 import Navbar from './nav.vue'
 export default {
-    components:{
-        Geo,
-        User,
-        Navbar
-    }
+  components: {
+    Geo,
+    User,
+    Navbar
+  }
 }
 </script>
 

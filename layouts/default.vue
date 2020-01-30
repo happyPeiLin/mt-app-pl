@@ -2,7 +2,7 @@
   <div>
     <el-container class="layout-default">
       <el-header>
-        <my-header></my-header>
+        <my-header />
       </el-header>
       <el-main>
         <nuxt />
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import MyHeader from "@/components/public/header/index.vue";
+import MyHeader from '@/components/public/header/index.vue'
 export default {
   components: {
     MyHeader
   }
-};
+}
 </script>
 
 <style lang="scss">
