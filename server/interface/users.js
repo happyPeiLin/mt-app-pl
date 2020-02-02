@@ -110,7 +110,7 @@ router.post('/signin', async (ctx, next) => {
 
 router.post('/verify', async (ctx, next) => {
   let username = ctx.request.body.username
-  const saveExpire = await Store.hget(`nodemail:${username}`, 'expire')
+  const saveExpire = await store.hget(`nodemail:${username}`, 'expire')
   if (saveExpire && new Date().getTime() - saveExpire < 0) {
     ctx.body = {
       code: -1,
@@ -128,7 +128,7 @@ router.post('/verify', async (ctx, next) => {
     }
   })
   let ko = {
-    code: Emial.smtp.code(),
+    code: Email.smtp.code(),
     expire: Email.smtp.expire(),
     email: ctx.request.body.email,
     user: ctx.request.body.username
